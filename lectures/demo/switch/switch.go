@@ -13,5 +13,26 @@ const (
 )
 
 func main() {
+    switch p := price(); {
+	case p < 2:
+     fmt.Println("cheap")
+	case p < 10:
+	 fmt.Println("moderately priced item") 	
+    default:
+     fmt.Println("expensive")  
+	}
+
+   
+	ticket := Economy
+	switch ticket {
+	case Economy:
+	 fmt.Println("Economy")	
+	case Business:
+	 fmt.Println("Business")	
+	case FirstClass:
+	 fmt.Println("FirstClass")
+    default:
+	 fmt.Println("Other type")
+	}
 
 }

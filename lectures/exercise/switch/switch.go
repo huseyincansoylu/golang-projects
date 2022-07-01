@@ -1,6 +1,11 @@
 //--Summary:
 //  Create a program to display a classification based on age.
 //
+
+package main
+
+import "fmt"
+
 //--Requirements:
 //* Use a `switch` statement to print the following:
 //  - "newborn" when age is 0
@@ -9,9 +14,18 @@
 //  - "teenager" when age is 13 through 17
 //  - "adult" when age is 18+
 
-package main
-
-import "fmt"
-
 func main() {
+	switch age := 14; {
+	 case age == 0:
+		fmt.Println("newborn")
+	 case age >= 1 && age <= 3:
+		fmt.Println("toddler")
+	 case age < 13:
+		fmt.Println("child")
+	 case age < 18:
+		fmt.Println("teenager")
+	default:
+		fmt.Println("adult")	 
+	}
+
 }
